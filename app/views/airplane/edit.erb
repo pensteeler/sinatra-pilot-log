@@ -1,0 +1,13 @@
+<h1>Editing Aircraft Tail#<%=@airplane.tail_number%></h1>
+<br><br>
+<form method="POST" action="/airplanes/<%=@airplane.id%>">
+  <label>Manufacturer</label><input type="text" name="manufacturer" value="<%=@airplane.manufacturer%>"><br>
+  <label>Type</label><input type="text" name="aircraft_type" value="<%=@airplane.aircraft_type%>"><br>
+  <label>Tail #</label><input type="text" name="tail_number" value="<%=@airplane.tail_number%>"><br>
+  <label>Last Flight</label><input type="text" name="last_flight" value="<%=@airplane.last_flight%>"><br>
+  <label>Last Checkout</label><input type="text" name="last_checkout" value="<%=@airplane.last_checkout%>"><br>
+  <label>Time in Type</label><input type="text" name="time_in_type" value="<%=@airplane.time_in_type%>"><br>
+  <label>Comments</label><input type="text" name="comments" value="<%=@airplane.comments%>"><br>
+
+  <input type="submit" value="Update">
+</form>

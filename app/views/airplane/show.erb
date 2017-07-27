@@ -1,0 +1,12 @@
+<h1>Showing one Airplane</h1>
+<p>Aircraft Manufacturer: <%= @airplane.manufacturer %></p>
+<p>Aircraft Type: <%= @airplane.aircraft_type %></p>
+<p>Tail Number: <%= @airplane.tail_number %></p>
+<p>Time in Type: <%= @airplane.time_in_type %></p>
+<p>Last Flight: <%= @airplane.last_flight %></p>
+<p>Last Checkout: <%= @airplane.last_checkout %></p>
+<p>Comments: <%= @airplane.comments %></p>
+<br><br>
+<a href="/airplanes/<%=@airplane.id%>/edit">Edit Aircraft</a> or
+ <a href="/airplanes/<%=@airplane.id%>/delete">Delete Aircraft</a> or
+ <a href="/airplanes">Show All</a>

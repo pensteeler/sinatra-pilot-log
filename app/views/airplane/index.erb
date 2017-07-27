@@ -1,0 +1,18 @@
+<h1>Welcome, <%=current_user.username%></h1>
+<p>Showing all your airplane data.</p>
+
+<% @airplanes.each do |airplane| %>
+  <h3>Aircraft #<%=airplane.id%></h3>
+  <label>Manufacturer: </label><%= airplane.manufacturer %><br>
+  <label>Type: </label><%= airplane.aircraft_type %><br>
+  <label>Tail #: </label><%= airplane.tail_number %><br>
+  <label>Last Flight: </label><%= airplane.last_flight %><br>
+  <label>Last Checkout: </label><%= airplane.last_checkout %><br>
+  <label>Time in Type: </label><%= airplane.time_in_type %><br>
+  <label>Comments: </label><%= airplane.comments %><br>
+  <a href="/airplanes/<%=airplane.id%>/edit">Edit</a>
+  <br><br>
+<% end %>
+
+<br><br>
+<a href="\airplanes\new">Add a new airplane</a>
