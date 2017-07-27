@@ -3,7 +3,9 @@ class AirplanesController < ApplicationController
   get '/airplanes' do
 
     if logged_in?
-      @airplanes = Airplane.all
+      @user = User.find_by( id: session[:user_id] )
+      @airplanes = @user.airplanes
+      #@airplanes = Airplane.all
       erb :'airplanes/index'
     else
       redirect '/login'
@@ -18,8 +20,6 @@ class AirplanesController < ApplicationController
     else
       @airplane = current_user.airplanes.create( manufacturer: params[:manufacturer], aircraft_type: params[:aircraft_type], tail_number: params[:tail_number], last_flight: params[:last_flight], last_checkout: params[:last_checkout], time_in_type: params[:time_in_type], comments: params[:comments] )
 
-      #puts "** Created new airplane:#{@airplane.manufacturer}/#{@airplane.aircraft_type}"
-      #puts "** Airplane Id:#{@airplane.id}"
       redirect "/airplanes/#{@airplane.id}"
     end
 
