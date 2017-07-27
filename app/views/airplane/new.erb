@@ -1,1 +1,14 @@
+<h1>Hi <%=current_user.username%></h1>
+<p>Lets add an airplane to your logs.</p>
+<br><br>
+<form method="POST" action="/airplanes">
+  <label>Manufacturer</label><input type="text" name="manufacturer"><br>
+  <label>Type</label><input type="text" name="aircraft_type"><br>
+  <label>Tail #</label><input type="text" name="tail_number"><br>
+  <label>Last Flight</label><input type="text" name="last_flight"><br>
+  <label>Last Checkout</label><input type="text" name="last_checkout"><br>
+  <label>Time in Type</label><input type="text" name="time_in_type"><br>
+  <label>Comments</label><input type="text" name="comments"><br>
 
+  <input type="submit" value="Add Airplane">
+</form>
