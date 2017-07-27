@@ -1,8 +1,8 @@
 <h1>Welcome, <%=current_user.username%></h1>
-<p>Showing all your aircraft</p>
+<h2>Showing all your aircraft</h2>
 
-<% @airplanes.each do |airplane| %>
-  <h3>Aircraft #<%=airplane.id%></h3>
+<% @airplanes.each.with_index(1) do |airplane, i| %>
+  <h3>Aircraft #<%=i%></h3>
   <label>Manufacturer: </label><%= airplane.manufacturer %><br>
   <label>Type: </label><%= airplane.aircraft_type %><br>
   <label>Tail #: </label><%= airplane.tail_number %><br>
