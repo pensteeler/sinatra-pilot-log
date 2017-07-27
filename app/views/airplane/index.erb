@@ -1,5 +1,5 @@
 <h1>Welcome, <%=current_user.username%></h1>
-<p>Showing all your airplane data.</p>
+<p>Showing all your aircraft</p>
 
 <% @airplanes.each do |airplane| %>
   <h3>Aircraft #<%=airplane.id%></h3>
@@ -15,4 +15,5 @@
 <% end %>
 
 <br><br>
-<a href="\airplanes\new">Add a new airplane</a>
+<a href="\airplanes\new">Add a new airplane</a> or
+<a href="/logout">LOGOUT</a>
